@@ -1,30 +1,39 @@
 #include <stdio.h>
 /*Ejercicio 2
-autor:Carlos Alvarez
-Descripcion general:Algortimo para determinar si un numero es mayor,menor o igual con respecto a otro*/
+autor:Carlos Alvarez*/
+/*Descripcion general:Algortimo para determinar si un numero es mayor,menor o igual con respecto a otro*/
+int Rnumero1();
+int Rnumero2();
+void MayorMenor(int numero1,int numero2);
 int main ()
 {
-	/*Se definen las veriables*/
-	int numero,numerodos;
-	/*entrada:Se solicita ingrese el valor para la variable*/
-	printf("introduzca un numero positivo o negativo:" );
-	scanf("%d",&numero);
-	printf("introduzca un numero positivo o negativo: " );
-	scanf("%d",&numerodos);
-	/*proceso:El valor es evaluado en cada una de las condiciones para determinar si es mayor,menor o igual que otro numero*/
-	if(numero> numerodos)
-	{
-		printf("es mayor que %d\n",numero);
-	}
-	else if(numerodos>numero)
-	{
-		printf("es mayor que %d\n",numerodos);
-	}
-	else
-	{
-		printf("son iguales");
-	}
-	/*salida:Se muestra en pantalla los valores obtenidos con su respectiva comparacion*/
-	return 0;
+int numero1=Rnumero1();
+int numero2=Rnumero2();
+MayorMenor(numero1,numero2);
 }
-
+int Rnumero1(){
+	int numero1=0;
+	printf("introduzca un numero positivo o negativo:" );
+	scanf("%d",&numero1);
+	return numero1;
+}
+int Rnumero2(){
+	int numero2=0;
+	printf("introduzca un numero positivo o negativo:" );
+	scanf("%d",&numero2);
+	return numero2;
+}
+void MayorMenor(int numero1,int numero2){
+	if(numero1>numero2){
+		printf("El numero %d es mayor\n",numero1);
+	}
+	else{
+		if(numero2>numero1){
+		printf("El numero %d es mayor \n",numero2);
+			}
+			else
+			{
+			printf("Los numeros son iguales");
+			}
+		}
+	}

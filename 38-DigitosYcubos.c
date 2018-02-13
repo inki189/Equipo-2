@@ -3,9 +3,17 @@
 /*
 Ejercicio 38
 Autor Jorge Anzures
+Programa que busca que numeros cumplen con que la suma del cubo de sus digitos sea igual al numero
 */
-int main(int argc, char *argv[]) {
-	/*inicializacion de las variables , como inicio 100 por ser el menor de 3 digitos
+void CalculaNumeros();
+void Descripcion();
+int main(int argc, char *argv[]){
+	Descripcion();
+	CalculaNumeros();
+}
+void CalculaNumeros() {
+	/*inicializacion de las variables
+	como inicio 100 por ser el menor de 3 digitos
 	Como final 999 por ser el ultimo
 	*/
 	int numero = 100;
@@ -26,6 +34,8 @@ int main(int argc, char *argv[]) {
 			printf ("El numero %d cumple con la condicion \n",i);
 		}
 	}
-	
-	return 0;
+}
+void Descripcion(){
+	printf("Programa para saber que numeros cumplen con la condicion:\n");
+	printf("La suma del cubo de sus digitos es igual al numero en cuestion\n");
 }

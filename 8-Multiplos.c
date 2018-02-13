@@ -1,25 +1,34 @@
 #include <stdio.h>
 /*Ejercicio 8
-Autor:Carlos Alvarez
-Descripcion general:Algortimo para determinar si un numero es multiplo o no de otro*/
+Autor:Carlos Alvarez*/
+/*Descripcion general:Algortimo para determinar si un numero es multiplo o no de otro*/
+int Rnumero1();
+int Rnumero2();
+void Multiplo(int a,int b);
 int main(int argc, char *argv[]) {
-	/*Se definen las veriables*/
-	int numero,numerodos;
-	/*entrada:Se solicita ingrese el valor para la variable*/
+int numero1=Rnumero1();
+int numero2=Rnumero2();
+Multiplo(numero1,numero2);
+}
+int Rnumero1(){
+	int numero1=0;
 	printf("introduzca un numero positivo o negativo:" );
-	scanf("%d",&numero);
-	printf("introduzca un numero positivo o negativo: " );
-	scanf("%d",&numerodos);
-	/*Proceso: Se obtiene el modulo de los numeros, en donde al ser 0, el numero sera el multiplo del otro*/
-	if(numero%numerodos==0)
+	scanf("%d",&numero1);
+	return numero1;
+}
+int Rnumero2(){
+	int numero2=0;
+	printf("introduzca un numero positivo o negativo:" );
+	scanf("%d",&numero2);
+	return numero2;
+}
+void Multiplo(int numero1,int numero2){
+	if(numero1%numero2==0)
 	{
-		printf("es multiplo del primero",numerodos);
+		printf("%d es multiplo de %d",numero1,numero2);
 	}
 	else
 	{
-		printf("no es multiplo del primero",numerodos);
+		printf("%d no es multiplo de %d",numero1,numero2);
 	}
-	/*Salida:muestra el valor obtenido en base a la condicion*/
-	return 0;
 }
-
